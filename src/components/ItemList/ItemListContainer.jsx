@@ -10,23 +10,20 @@ function ItemListContainer(props) {
         <div className="cards">
           <Item 
               //ruta absoluta web
-              imgurl="https://http2.mlstatic.com/D_NQ_NP_831858-MLA48044614602_102021-W.webp" 
-              title="Remera X" 
-              price={100}
-              color="purple"
+              imgurl="/imgs/dulceFrutosRojos.webp" 
+              title="Mermelada de Frutos del Bosque" 
+              price={1000}
           />
           <Item
               //imagen local
-              imgurl="/imgs/remera1.webp" 
-              title="Remera Y" 
-              price={200}
-              color="red"
+              imgurl="/imgs/dulceFrambuesa.webp" 
+              title="Mermelada de Frambuesa" 
+              price={900}
           />
           <Item
-              imgurl="https://http2.mlstatic.com/D_NQ_NP_705326-MLA49735701383_042022-W.webp" 
-              title="Zapatillas X" 
-              price={400}
-              color="blue"
+              imgurl="/imgs/almendras1.webp" 
+              title="Almendras Non Pareil por kg." 
+              price={1800}
           />
         </div>
     </div>

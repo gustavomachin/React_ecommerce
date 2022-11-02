@@ -7,18 +7,18 @@ function NavBar() {
         <ul className="nav-list">
             <li>
                 <a href="/">
-                    <h2>Mi tienda</h2>
+                    <img src="/imgs/Logo.jpg" alt="logo" />
                 </a>
             </li>
 
             <li>
-                <a href="/">Categoría A</a>
+                <a href="/">Mermeladas</a>
             </li>
             <li>
-                <a href="/">Categoría B</a>
+                <a href="/">Dulces</a>
             </li>
             <li>
-                <a href="/">Categoría C</a>
+                <a href="/">Frutos secos</a>
             </li>
             <li>
                 <CartWidget/>
