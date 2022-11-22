@@ -1,21 +1,22 @@
-import "./MyButton.css";
-import React, { useState } from "react"
+import "./mybutton.css";
+import React, { useState } from "react";
 
-function MyButton(props){
-  //ESTADO
+function MyButton(props) {
   let [colorBtn, setColorBtn] = useState(props.color);
-  //let colorBtn = props.color;
 
-  function handleClick(){
-    setColorBtn("grey");
+  function handleClick() {
+    setColorBtn("#555");
   }
 
-  const styleButton = {backgroundColor: colorBtn}
-  return( 
-    <button onClick={handleClick} style={styleButton} className="btn">
-      {props.text}
+  return (
+    <button
+      onClick={handleClick}
+      style={{ backgroundColor: colorBtn, marginBotton: "10px" }}
+      className="btn"
+    >
+      {props.children}
     </button>
-  );  
+  );
 }
 
 export default MyButton;

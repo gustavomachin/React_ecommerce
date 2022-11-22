@@ -1,33 +1,41 @@
-//rfce: componente funcional de react
-import Item from "./Item";
-import "./itemlist.css"
+import { useState, useEffect } from "react";
 
-function ItemListContainer(props) {
+import Item from "./Item";
+import "./itemlist.css";
+import getItems from "../../Services/mockService";
+
+import { useParams } from "react-router-dom";
+
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  const { idCategory } = useParams();
+
+  async function getItemsAsync() {
+    let respuesta = await getItems(idCategory);
+    setProducts(respuesta);
+  }
+
+  useEffect(() => {
+    getItemsAsync();
+  }, [idCategory]);
+
   return (
-    <div>
-        {/* prop de bienvenida */}
-        <h1>{props.greeting}</h1>
-        <div className="cards">
-          <Item 
-              //ruta absoluta web
-              imgurl="/imgs/dulceFrutosRojos.webp" 
-              title="Mermelada de Frutos del Bosque" 
-              price={1000}
-          />
+    <div className="item-list">
+      {products.map((product) => {
+        return (
           <Item
-              //imagen local
-              imgurl="/imgs/dulceFrambuesa.webp" 
-              title="Mermelada de Frambuesa" 
-              price={900}
+            key={product.id}
+            id={product.id}
+            imgurl={product.imgurl}
+            title={product.title}
+            price={product.price}
+            category={product.category}
+            color="darkgreen"
           />
-          <Item
-              imgurl="/imgs/almendras1.webp" 
-              title="Almendras Non Pareil por kg." 
-              price={1800}
-          />
-        </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

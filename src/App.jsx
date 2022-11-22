@@ -1,36 +1,26 @@
-// import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 
-//Importamos componentes
-// import MyButton from './components/MyButton/MyButton';
-import ItemListContainer from './components/ItemList/ItemListContainer';
-import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  // const title = "Bienvenidos a la clase 4";
-  
-  /*CSS in JS*/
-/*   const styleH3 = {backgroundColor: "darkred", color: "white"};
-  let titulo = <h3 style={styleH3}>Hola Comisión #34815!</h3>; */
-
   return (
-    <>
-      <div className="App">
-        <header className="App-header">
-          <NavBar/>
-          <ItemListContainer greeting="Bienvenidos a la tienda"/>
-          {/* {titulo} */}
-{/*           <img src={logo} className="App-logo" alt="logo" />
-          <p>{title}</p>
-          <MyButton text="Botón 1" color="darkgreen"/>
-          <MyButton text="Botón 2" color="darkblue"/>
-          <MyButton text="Botón 3" color="red"/> */}
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
 
-          
+          <Route path="/category/:idCategory" element={<ItemListContainer />} />
 
-        </header>
-      </div>
-    </>    
+          <Route path="/detail/:idItem" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>Error 404: Está página no existe</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
