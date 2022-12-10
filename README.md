@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Objetivo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La web page ha sido diseñada utilizando React JS, teniendo como objetivo servir como e-commerce para la adquisición de cualquier tipo de línea de productos, en este caso puntual el 🛒e-commerce🛒 desarrollado, se focaliza en la línea de hardware, óptima para el usuario gaming.
 
 ## Available Scripts
 
