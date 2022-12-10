@@ -7,7 +7,7 @@ El proyecto ha sido diseñada utilizando React JS. La e-commerce se especializa 
 ## Funcionalidad 
 La aplicación permite conectarse con una base de datos de Firebase.
 Permite seleccionar ciertos productos, visualizar los detalles de los mismos, agregarlos al carrito,
-solicitar datos de los cliente, simular la compra de los productos. Al clickear sobre el botón "Finalizar Compra", se genera un id de orden de compra en firebase donde se guarda con los datos del cliente con los productos que compró.
+solicitar datos de los cliente, simular la compra de los productos. Al clickear sobre el botón "Finalizar Compra", se genera un id de orden de compra en firebase donde se guarda los datos del cliente y los productos que compró.
 
 ## Tecnologías y librerías:
 
