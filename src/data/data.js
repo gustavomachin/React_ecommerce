@@ -2,6 +2,7 @@ const products = [
   {
     id: 1,
     title: "Mermelada de Higo - El Brocal",
+    discount: "20%",
     description: "Mermelada De Higo X420g - Sin Tacc Y Natural - El Brocal",
     price: 700,
     stock: 49,
@@ -12,6 +13,7 @@ const products = [
   {
     id: 2,
     title: "Mermelada de Frutos Rojos - El Brocal",
+    discount: "20%",
     description: "Mermelada De Frutos Rojos X420g Sin Tacc Y Sin Conservantes",
     price: 900,
     stock: 34,
@@ -21,6 +23,7 @@ const products = [
   {
     id: 3,
     title: "Mermelada De Frutilla Light - El Brocal",
+    discount: "20%",
     description: "Mermelada De Frutilla Light X 400g - Sin Tacc Y Natural - El Brocal",
     price: 1000,
     stock: 123,
@@ -32,7 +35,7 @@ const products = [
     title: "Mermelada Frutilla - Patagonia Berries",
     description: "Mermelada Patagonia Berries Frutillas X 352 Gr - Patagonia",
     price: 1200,
-    stock: 32,
+    stock: 0,
     category: "mermeladas",
     imgurl: "https://http2.mlstatic.com/D_NQ_NP_944459-MLA46544634992_062021-O.webp",
   },
